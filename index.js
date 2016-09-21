@@ -16,3 +16,24 @@ const monologueLines = [
   'No.',
   'I am the one who knocks!'
 ];
+
+const totalBatteries = batteryBatches.reduce((prev, curr) => prev + curr, 0);
+
+const lines = [
+  'Who are you talking to right now?',
+  'Who is it you think you see?',
+  'Do you know how much I make a year?',
+];
+
+
+const wordCountMap = monologueLines.reduce((total, curr) => {
+    var count = curr.split(" ").length;
+      if (total[count]){
+        total[count]++;
+      } else {
+        total[count] = 1;
+      }
+      return total;
+  }, {});
+
+// const wordCountMap =
